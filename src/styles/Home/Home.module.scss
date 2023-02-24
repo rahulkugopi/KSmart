@@ -1,0 +1,116 @@
+@import '../../variables/variables.scss';
+
+.Home {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px 20px;
+
+    .Header {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 10px 0 0 0;
+
+        .HeaderName {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                margin: 0;
+                @include font($PrimaryFont, 30px, $FontWeightUltraBold, $DeepGreen);
+            }
+        }
+
+        .HeaderFrom {
+            height: 55px;
+            box-sizing: border-box;
+            margin: 0 0 0px 0;
+            padding: 0px 10px;
+            display: flex;
+
+            input {
+                width: 400px;
+                height: 50px;
+                box-sizing: border-box;
+                padding: 0px 10px 0px 45px;
+                background: $WhiteColor;
+                border: 1px solid #d5d9de;
+                border-radius: 4px;
+                outline: none;
+                background-image: url('../../assests/images/search.svg');
+                background-repeat: no-repeat;
+                background-position: 13px 13px;
+                background-size: 25px;
+                @include font($PrimaryFont, $FontSize15, $FontWeightMedium, $PrimaryColor);
+
+                &:focus {
+                    border: solid 1px #d5d9de;
+                }
+            }
+        }
+
+        .HeaderBtn{
+            button{
+                width: 200px;
+                height: 50px;
+                border: 0;
+                border-radius: 50px;
+                background-color: $SecondaryColor;                
+                cursor: pointer;
+                @include font($PrimaryFont, $PrimaryFontSize, $FontWeightSemiBold, $WhiteColor);
+            }
+        }
+    }
+
+    .content{
+        width: 100%;
+        padding: 15px 0 0 0;
+        box-sizing: border-box;        
+
+        table{
+            width: 100%;
+            th{
+                @include font($PrimaryFont, $PrimaryFontSize, $FontWeightSemiBold, $PrimaryColor);
+                padding: 10px;
+                background-color: $WhiteColor;
+                border-radius: 10px;
+                border-bottom: 7px solid rgb(248 249 250);
+
+                &:last-child{
+                    border: 0;
+                    border-bottom: 7px solid rgb(248 249 250);
+                }
+            }
+
+            td{
+                @include font($PrimaryFont, $PrimaryFontSize, $FontWeightMedium, $PrimaryColor);
+                padding:10px;
+                background-color: $WhiteColor;
+                border-bottom: 7px solid rgb(248 249 250);
+                border-radius: 10px;
+            }
+
+            .chip{
+                border-radius: 5px;
+                color: $WhiteColor;
+                text-transform: capitalize;
+            }
+
+            .active{
+                background-color: $SecondaryColor;
+            }
+
+            .inactive{
+                background-color: $PrimaryColor;
+            }
+        }
+    }
+}

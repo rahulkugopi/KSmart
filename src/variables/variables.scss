@@ -1,0 +1,33 @@
+$PrimaryColor : #343a40;
+$SecondaryColor : #28a745;
+$TertiaryColor: #f8f9fa;
+$DeepGreen: #024102;
+$WhiteColor : #fff;
+$Gray :#6c757d;
+
+$PrimaryFont: 'Lato', sans-serif;
+
+$FontSize12: 12px;
+$FontSize14: 14px;
+$FontSize15: 15px;
+$PrimaryFontSize: 16px;
+$SecondaryFontSize: 18px;
+$TertiaryFontSize: 20px;
+$FontSize22: 22px;
+$FontSize25: 25px;
+
+$FontWeightThin: 100;
+$FontWeightLight: 300;
+$FontWeightRegular: 400;
+$FontWeightMedium: 500;
+$FontWeightSemiBold: 600;
+$FontWeightBold: 700;
+$FontWeightUltraBold: 900;
+
+// font styles adding
+@mixin font($font, $fontSize, $fontWeight, $color) {
+    font-family: $font;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $color;
+}
